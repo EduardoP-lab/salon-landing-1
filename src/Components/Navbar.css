@@ -1,0 +1,202 @@
+.salon-navbar {
+  --nav-bg: rgba(255, 250, 248, 0.78);
+  --nav-border: rgba(120, 72, 64, 0.12);
+  --ink: #261b1a;
+  --muted: #725f59;
+  --rose: #c46c62;
+  --plum: #56394a;
+  --gold: #c7a263;
+  animation: nav-drop 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.salon-navbar.is-scrolled {
+  --nav-bg: rgba(255, 250, 248, 0.92);
+  --nav-border: rgba(86, 57, 74, 0.16);
+  box-shadow: 0 20px 60px rgba(54, 32, 28, 0.1);
+}
+
+.salon-nav-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.salon-nav-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(199, 162, 99, 0.22), transparent 32%),
+    radial-gradient(circle at 92% 10%, rgba(196, 108, 98, 0.16), transparent 28%),
+    var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  backdrop-filter: blur(22px) saturate(1.22);
+  -webkit-backdrop-filter: blur(22px) saturate(1.22);
+  transition:
+    background 360ms ease,
+    border-color 360ms ease,
+    box-shadow 360ms ease;
+}
+
+.salon-brand-mark {
+  background:
+    linear-gradient(135deg, rgba(196, 108, 98, 0.98), rgba(86, 57, 74, 0.98)),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.35), transparent);
+  box-shadow: 0 14px 30px rgba(196, 108, 98, 0.26);
+}
+
+.salon-brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  transform: rotate(18deg);
+}
+
+.salon-nav-link {
+  position: relative;
+  color: var(--muted);
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.salon-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  right: 0.95rem;
+  bottom: 0.35rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--rose), var(--gold));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.salon-nav-link:hover,
+.salon-nav-link.is-active {
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.salon-nav-link:hover::after,
+.salon-nav-link.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.salon-cta {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(196, 108, 98, 0.28);
+}
+
+.salon-cta::before {
+  content: "";
+  position: absolute;
+  inset: -60% -30%;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.42), transparent 70%);
+  transform: translateX(-80%) rotate(10deg);
+  transition: transform 620ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.salon-cta:hover::before {
+  transform: translateX(80%) rotate(10deg);
+}
+
+.salon-menu-button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.salon-menu-line {
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 280ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 180ms ease;
+}
+
+.salon-menu-button.is-open .salon-menu-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.salon-menu-button.is-open .salon-menu-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+.salon-menu-button.is-open .salon-menu-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.salon-mobile-panel {
+  transform-origin: top center;
+  transition:
+    opacity 260ms ease,
+    transform 360ms cubic-bezier(0.19, 1, 0.22, 1),
+    visibility 260ms ease;
+}
+
+.salon-mobile-panel.is-closed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(0.98);
+}
+
+.salon-mobile-panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.salon-mobile-link {
+  transform: translateX(-12px);
+  opacity: 0;
+  transition:
+    transform 420ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 300ms ease,
+    background 220ms ease;
+}
+
+.salon-mobile-panel.is-open .salon-mobile-link {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: calc(var(--item-index) * 52ms);
+}
+
+.salon-mobile-link.is-active {
+  background: rgba(196, 108, 98, 0.12);
+  color: var(--ink);
+}
+
+@keyframes nav-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salon-navbar,
+  .salon-nav-link,
+  .salon-nav-link::after,
+  .salon-cta::before,
+  .salon-menu-line,
+  .salon-mobile-panel,
+  .salon-mobile-link {
+    animation: none;
+    transition-duration: 0.01ms;
+  }
+}
