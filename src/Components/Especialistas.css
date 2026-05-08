@@ -1,0 +1,427 @@
+.salon-specialists {
+  background: #fffaf7;
+  color: #251719;
+  padding: clamp(4.5rem, 8vw, 7rem) 1rem;
+}
+
+.salon-specialists-shell {
+  width: min(100%, 84rem);
+  margin: 0 auto;
+}
+
+.salon-specialists-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.64fr) minmax(18rem, 0.36fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 3.2rem);
+}
+
+.salon-specialists-heading p,
+.salon-specialists-panel > p {
+  margin: 0 0 0.8rem;
+  color: #9a6d4f;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.salon-specialists-heading h2 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.55rem, 5.1vw, 5.15rem);
+  font-weight: 780;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-specialists-heading span {
+  display: block;
+  border-left: 2px solid #d8b36c;
+  padding-left: 1rem;
+  color: #6f5a55;
+  font-size: clamp(0.98rem, 1.6vw, 1.1rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.salon-specialists-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+}
+
+.salon-specialists-roster {
+  border-top: 1px solid #dfcbc3;
+}
+
+.salon-specialist-row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(12rem, 0.85fr) minmax(12rem, 0.9fr) minmax(14rem, 1fr) 5.5rem;
+  gap: clamp(0.85rem, 1.6vw, 1.4rem);
+  align-items: center;
+  border-bottom: 1px solid #dfcbc3;
+  padding: clamp(1rem, 2.2vw, 1.45rem) 0;
+}
+
+.salon-specialist-number {
+  color: #b3988f;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.salon-specialist-id {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.salon-specialist-avatar {
+  display: grid;
+  width: 3.4rem;
+  height: 3.4rem;
+  place-items: center;
+  border: 1px solid rgba(96, 113, 100, 0.24);
+  border-radius: 999px;
+  background: #f1e3db;
+  color: #607164;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.salon-specialist-id h3 {
+  margin: 0;
+  font-size: clamp(1.22rem, 1.8vw, 1.6rem);
+  font-weight: 780;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.salon-specialist-id p {
+  margin: 0.35rem 0 0;
+  color: #8a6f68;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.salon-specialist-focus {
+  border-left: 2px solid #d8b36c;
+  padding-left: 0.85rem;
+}
+
+.salon-specialist-focus span,
+.salon-specialist-years span {
+  display: block;
+  color: #9f7b59;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.salon-specialist-focus strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+  line-height: 1.34;
+}
+
+.salon-specialist-detail {
+  margin: 0;
+  color: #735d58;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.salon-specialist-years {
+  justify-self: end;
+  text-align: right;
+}
+
+.salon-specialist-years strong {
+  display: block;
+  margin-top: 0.35rem;
+  color: #c46c62;
+  font-size: 1rem;
+}
+
+.salon-specialists-panel {
+  position: sticky;
+  top: 7.5rem;
+  border: 1px solid #ead8d0;
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(145deg, rgba(43, 26, 27, 0.96), rgba(79, 51, 48, 0.94)),
+    #2b1a1b;
+  color: #fff9f5;
+  padding: clamp(1.25rem, 2.6vw, 1.8rem);
+}
+
+.salon-specialists-panel > p {
+  color: rgba(255, 249, 245, 0.68);
+}
+
+.salon-specialists-panel h3 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  font-weight: 780;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-specialists-panel > span {
+  display: block;
+  margin-top: 1.15rem;
+  color: rgba(255, 249, 245, 0.76);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.salon-specialists-trust {
+  display: grid;
+  gap: 0;
+  margin: clamp(1.5rem, 3vw, 2.2rem) 0 0;
+  border-top: 1px solid rgba(255, 249, 245, 0.18);
+}
+
+.salon-specialists-trust div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 249, 245, 0.14);
+  padding: 0.95rem 0;
+}
+
+.salon-specialists-trust div:last-child {
+  border-bottom: 0;
+}
+
+.salon-specialists-trust dt {
+  color: #e9a098;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 780;
+  line-height: 1;
+}
+
+.salon-specialists-trust dd {
+  margin: 0;
+  color: rgba(255, 249, 245, 0.66);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.salon-specialists-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: clamp(1.4rem, 4vw, 2.4rem);
+  border-top: 1px solid #e4d4cc;
+  padding-top: 1.4rem;
+}
+
+.salon-specialists-footer p {
+  max-width: 42rem;
+  margin: 0;
+  color: #735d58;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.salon-specialists-footer a {
+  min-height: 3.2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #607164;
+  padding: 0.85rem 1.25rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  transition:
+    transform 220ms ease,
+    background 220ms ease;
+}
+
+.salon-specialists-footer a:hover {
+  transform: translateY(-2px);
+  background: #4f5f53;
+}
+
+@media (max-width: 1120px) {
+  .salon-specialists-board,
+  .salon-specialists-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-specialists-heading h2 {
+    max-width: 15ch;
+  }
+
+  .salon-specialists-heading span {
+    max-width: 42rem;
+  }
+
+  .salon-specialists-panel {
+    position: static;
+  }
+
+  .salon-specialists-trust {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .salon-specialists-trust div {
+    display: grid;
+    justify-items: start;
+    border-bottom: 0;
+    border-right: 1px solid rgba(255, 249, 245, 0.14);
+    padding: 1rem;
+  }
+
+  .salon-specialists-trust div:last-child {
+    border-right: 0;
+  }
+
+  .salon-specialists-trust dd {
+    text-align: left;
+  }
+}
+
+@media (max-width: 820px) {
+  .salon-specialist-row {
+    grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+    grid-template-areas:
+      "number id years"
+      "number focus focus"
+      "number detail detail";
+  }
+
+  .salon-specialist-number {
+    grid-area: number;
+    align-self: start;
+    padding-top: 0.25rem;
+  }
+
+  .salon-specialist-id {
+    grid-area: id;
+  }
+
+  .salon-specialist-focus {
+    grid-area: focus;
+  }
+
+  .salon-specialist-detail {
+    grid-area: detail;
+  }
+
+  .salon-specialist-years {
+    grid-area: years;
+  }
+}
+
+@media (max-width: 640px) {
+  .salon-specialists {
+    padding: 4rem 1rem;
+  }
+
+  .salon-specialists-heading {
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .salon-specialists-heading h2 {
+    max-width: 12.5ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.35rem, 10.8vw, 3.35rem);
+  }
+
+  .salon-specialists-heading span {
+    border-left: 0;
+    border-top: 2px solid #d8b36c;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+  }
+
+  .salon-specialist-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "number"
+      "id"
+      "focus"
+      "detail"
+      "years";
+    gap: 0.85rem;
+    padding: 1.1rem 0;
+  }
+
+  .salon-specialist-number {
+    padding-top: 0;
+  }
+
+  .salon-specialist-avatar {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+
+  .salon-specialist-years {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .salon-specialists-panel {
+    padding: 1.1rem;
+  }
+
+  .salon-specialists-panel h3 {
+    max-width: 11ch;
+    font-size: clamp(2rem, 9.5vw, 2.8rem);
+  }
+
+  .salon-specialists-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-specialists-trust div {
+    display: flex;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 249, 245, 0.14);
+    padding: 0.9rem 0;
+  }
+
+  .salon-specialists-trust dd {
+    text-align: right;
+  }
+
+  .salon-specialists-footer {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .salon-specialists-footer a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salon-specialists-footer a {
+    transition-duration: 0.01ms;
+  }
+}
