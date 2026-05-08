@@ -1,0 +1,315 @@
+.salon-services {
+  background: #fff7f3;
+  color: #2b1a1b;
+  padding: clamp(4.25rem, 8vw, 7rem) 1rem;
+}
+
+.salon-services-shell {
+  width: min(100%, 84rem);
+  margin: 0 auto;
+}
+
+.salon-services-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(17rem, 0.32fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.salon-services-heading p {
+  margin: 0 0 0.8rem;
+  color: #9a6d4f;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.salon-services-heading h2 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(2.6rem, 5.2vw, 5.25rem);
+  font-weight: 780;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-services-heading span {
+  display: block;
+  border-left: 2px solid #d8b36c;
+  padding-left: 1rem;
+  color: #735d58;
+  font-size: clamp(0.98rem, 1.6vw, 1.1rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.salon-services-layout {
+  display: grid;
+  grid-template-columns: minmax(19rem, 0.42fr) minmax(0, 0.58fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.salon-service-feature,
+.salon-service-card {
+  border: 1px solid #ead8d0;
+  border-radius: 0.45rem;
+  box-shadow: 0 18px 50px rgba(81, 48, 42, 0.07);
+}
+
+.salon-service-feature {
+  display: grid;
+  align-content: space-between;
+  min-height: 100%;
+  padding: clamp(1.3rem, 3vw, 2rem);
+  background:
+    linear-gradient(145deg, rgba(43, 26, 27, 0.96), rgba(82, 50, 54, 0.92)),
+    #2b1a1b;
+  color: #fff9f5;
+}
+
+.salon-service-feature h3 {
+  max-width: 10ch;
+  margin: 1.1rem 0 0;
+  font-size: clamp(2.5rem, 4.7vw, 4.8rem);
+  font-weight: 780;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-service-feature p {
+  max-width: 34rem;
+  margin: 1.2rem 0 2rem;
+  color: rgba(255, 249, 245, 0.76);
+  font-size: clamp(1rem, 1.5vw, 1.14rem);
+  line-height: 1.7;
+}
+
+.salon-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.salon-service-card {
+  display: grid;
+  min-height: 15.5rem;
+  align-content: space-between;
+  gap: 1.5rem;
+  background: rgba(255, 252, 249, 0.76);
+  padding: clamp(1.05rem, 2vw, 1.35rem);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.salon-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 108, 98, 0.42);
+  box-shadow: 0 24px 60px rgba(81, 48, 42, 0.12);
+}
+
+.salon-service-tag {
+  display: inline-flex;
+  width: fit-content;
+  border-left: 2px solid #d8b36c;
+  padding-left: 0.65rem;
+  color: #9f7b59;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.salon-service-feature .salon-service-tag {
+  color: rgba(255, 249, 245, 0.72);
+}
+
+.salon-service-card h3 {
+  margin: 0.85rem 0 0;
+  font-size: clamp(1.32rem, 2vw, 1.72rem);
+  font-weight: 780;
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-service-card p {
+  margin: 0.85rem 0 0;
+  color: #735d58;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.salon-service-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #ead8d0;
+  padding-top: 0.95rem;
+}
+
+.salon-service-feature .salon-service-meta {
+  border-top-color: rgba(255, 249, 245, 0.18);
+}
+
+.salon-service-meta span {
+  color: #8f7770;
+  font-size: 0.85rem;
+  font-weight: 850;
+}
+
+.salon-service-feature .salon-service-meta span {
+  color: rgba(255, 249, 245, 0.62);
+}
+
+.salon-service-meta strong {
+  color: #c46c62;
+  font-size: 0.95rem;
+}
+
+.salon-service-feature .salon-service-meta strong {
+  color: #e9a098;
+}
+
+.salon-services-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: clamp(1.4rem, 4vw, 2.4rem);
+  border-top: 1px solid #e4d4cc;
+  padding-top: 1.4rem;
+}
+
+.salon-services-footer p {
+  max-width: 39rem;
+  margin: 0;
+  color: #735d58;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.salon-services-footer a {
+  min-height: 3.2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #607164;
+  padding: 0.85rem 1.25rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  transition:
+    transform 220ms ease,
+    background 220ms ease;
+}
+
+.salon-services-footer a:hover {
+  transform: translateY(-2px);
+  background: #4f5f53;
+}
+
+@media (max-width: 980px) {
+  .salon-services-heading,
+  .salon-services-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-services-heading h2 {
+    max-width: 14ch;
+  }
+
+  .salon-services-heading span {
+    max-width: 42rem;
+  }
+
+  .salon-service-feature {
+    min-height: 23rem;
+  }
+
+  .salon-service-feature h3 {
+    max-width: 12ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .salon-services {
+    padding: 4rem 1rem;
+  }
+
+  .salon-services-heading {
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .salon-services-heading h2 {
+    max-width: 12.5ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.4rem, 11vw, 3.45rem);
+  }
+
+  .salon-services-heading span {
+    border-left: 0;
+    border-top: 2px solid #d8b36c;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+  }
+
+  .salon-services-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .salon-service-feature,
+  .salon-service-card {
+    min-height: auto;
+    gap: 1.3rem;
+    padding: 1.1rem;
+  }
+
+  .salon-service-feature h3 {
+    max-width: 10ch;
+    font-size: clamp(2rem, 10vw, 2.9rem);
+  }
+
+  .salon-service-card h3 {
+    font-size: 1.38rem;
+  }
+
+  .salon-service-card p {
+    font-size: 0.92rem;
+  }
+
+  .salon-service-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .salon-services-footer {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .salon-services-footer a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salon-service-card,
+  .salon-services-footer a {
+    transition-duration: 0.01ms;
+  }
+}
