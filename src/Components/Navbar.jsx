@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 const navItems = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Especialistas', href: '#especialistas' },
-  { label: 'Galeria', href: '#galeria' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/#inicio' },
+  { label: 'Servicios', href: '/#servicios' },
+  { label: 'Especialistas', href: '/#especialistas' },
+  { label: 'Galeria', href: '/#galeria' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
 
 function Navbar() {
+  const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeHref, setActiveHref] = useState('#inicio')
+  const activeHref =
+    location.pathname === '/' ? `/${location.hash || '#inicio'}` : location.pathname
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,8 +46,7 @@ function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const handleNavClick = (href) => {
-    setActiveHref(href)
+  const handleNavClick = () => {
     setIsOpen(false)
   }
 
@@ -58,9 +60,9 @@ function Navbar() {
         className="salon-nav-shell mx-auto flex max-w-7xl items-center justify-between rounded-[1.75rem] px-4 py-3 text-sm text-[#261b1a] sm:px-5 lg:px-6"
         aria-label="Navegacion principal"
       >
-        <a
-          href="#inicio"
-          onClick={() => handleNavClick('#inicio')}
+        <Link
+          to="/#inicio"
+          onClick={handleNavClick}
           className="group flex min-w-0 items-center gap-3"
           aria-label="Estetica Aurora, inicio"
         >
@@ -75,32 +77,33 @@ function Navbar() {
               Belleza consciente
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
-              onClick={() => handleNavClick(item.href)}
+              to={item.href}
+              onClick={handleNavClick}
               className={`salon-nav-link rounded-full px-4 py-3 font-medium ${
-                activeHref === item.href ? 'is-active' : ''
+                location.pathname === '/' && activeHref === item.href
+                  ? 'is-active'
+                  : ''
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          
-          <a
-            href="#reservar"
-            onClick={() => handleNavClick('#reservar')}
+          <Link
+            to="/reservar"
+            onClick={handleNavClick}
             className="salon-cta rounded-full bg-[#c46c62] px-5 py-3 font-semibold text-black transition hover:-translate-y-0.5 hover:bg-[#b85e55]"
           >
             Reservar cita
-          </a>
+          </Link>
         </div>
 
         <button
@@ -129,12 +132,14 @@ function Navbar() {
       >
         <div className="grid gap-1">
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
-              onClick={() => handleNavClick(item.href)}
+              to={item.href}
+              onClick={handleNavClick}
               className={`salon-mobile-link flex items-center justify-between rounded-2xl px-4 py-4 text-base font-semibold text-[#725f59] ${
-                activeHref === item.href ? 'is-active' : ''
+                location.pathname === '/' && activeHref === item.href
+                  ? 'is-active'
+                  : ''
               }`}
               style={{ '--item-index': index }}
             >
@@ -142,7 +147,7 @@ function Navbar() {
               <span aria-hidden="true" className="text-[#c46c62]">
                 +
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -153,13 +158,13 @@ function Navbar() {
           >
             Llamar
           </a>
-          <a
-            href="#reservar"
-            onClick={() => handleNavClick('#reservar')}
+          <Link
+            to="/reservar"
+            onClick={handleNavClick}
             className="salon-cta min-h-12 flex justify-center items-center rounded-2xl bg-[#c46c62] px-3 text-sm font-semibold text-black"
           >
             Reservar
-          </a>
+          </Link>
         </div>
       </div>
     </header>

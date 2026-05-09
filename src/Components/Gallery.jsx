@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import browsImage from '../assets/salon-gallery-brows.png'
 import facialImage from '../assets/salon-gallery-facial.png'
 import hairImage from '../assets/salon-gallery-hair.png'
@@ -121,7 +122,7 @@ function Gallery() {
             Cada resultado depende de tu punto de partida, pero la intencion es
             constante: verte cuidada, fresca y completamente tu.
           </p>
-          <a href="#reservar">Quiero este mood</a>
+          <Link to="/reservar">Quiero este mood</Link>
         </div>
       </div>
     </section>

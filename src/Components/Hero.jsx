@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import heroImage from '../assets/salon-hero-boutique-v2.png'
 import './Hero.css'
 
@@ -32,9 +33,9 @@ function Hero() {
           </p>
 
           <div className="salon-hero-actions">
-            <a href="#reservar" className="salon-hero-primary">
+            <Link to="/reservar" className="salon-hero-primary">
               Reservar cita
-            </a>
+            </Link>
             <a href="#servicios" className="salon-hero-secondary">
               Explorar servicios
             </a>
