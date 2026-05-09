@@ -118,7 +118,9 @@ function Especialistas() {
             Si no sabes con quien reservar, te recomendamos especialista segun
             servicio y disponibilidad.
           </p>
-          <a href="tel:+526621234567">Pedir recomendacion</a>
+          <a className="salon-mobile-call" href="tel:+526621234567">
+            Pedir recomendacion
+          </a>
         </div>
       </div>
     </section>

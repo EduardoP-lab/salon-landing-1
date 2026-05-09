@@ -1,0 +1,443 @@
+.salon-contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #fffaf7 0%, #fff3ee 100%),
+    #fffaf7;
+  color: #251719;
+  padding: clamp(4.5rem, 8vw, 7.2rem) 1rem;
+}
+
+.salon-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(216, 179, 108, 0.12) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(196, 108, 98, 0.1) 1px, transparent 1px);
+  background-size: 5.5rem 5.5rem;
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 78%, transparent);
+  opacity: 0.34;
+}
+
+.salon-contact-shell {
+  position: relative;
+  width: min(100%, 84rem);
+  margin: 0 auto;
+}
+
+.salon-contact-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.66fr) minmax(18rem, 0.34fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 3.2rem);
+}
+
+.salon-contact-heading p,
+.salon-contact-form-top p,
+.salon-contact-map-card > span {
+  margin: 0 0 0.8rem;
+  color: #9a6d4f;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.salon-contact-heading h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(2.55rem, 5.1vw, 5.2rem);
+  font-weight: 780;
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-contact-heading span {
+  display: block;
+  border-left: 2px solid #d8b36c;
+  padding-left: 1rem;
+  color: #735d58;
+  font-size: clamp(0.98rem, 1.6vw, 1.1rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.salon-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(19rem, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+  align-items: stretch;
+}
+
+.salon-contact-form,
+.salon-contact-map {
+  border: 1px solid #ead8d0;
+  border-radius: 0.45rem;
+  box-shadow: 0 24px 70px rgba(81, 48, 42, 0.1);
+}
+
+.salon-contact-form {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  background:
+    linear-gradient(145deg, rgba(43, 26, 27, 0.97), rgba(82, 50, 54, 0.94)),
+    #2b1a1b;
+  padding: clamp(1.15rem, 2.8vw, 1.7rem);
+  color: #fff9f5;
+}
+
+.salon-contact-form-top {
+  margin-bottom: 0.35rem;
+}
+
+.salon-contact-form-top p {
+  color: rgba(255, 249, 245, 0.68);
+}
+
+.salon-contact-form-top h3 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.1rem, 3.5vw, 3.55rem);
+  font-weight: 780;
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.salon-contact-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.salon-contact-field span {
+  color: rgba(255, 249, 245, 0.72);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.salon-contact-field input,
+.salon-contact-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 249, 245, 0.16);
+  border-radius: 0.4rem;
+  background: rgba(255, 249, 245, 0.085);
+  color: #fff9f5;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: 0;
+  padding: 0.95rem 1rem;
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.salon-contact-field textarea {
+  min-height: 9.5rem;
+  resize: vertical;
+}
+
+.salon-contact-field input::placeholder,
+.salon-contact-field textarea::placeholder {
+  color: rgba(255, 249, 245, 0.4);
+}
+
+.salon-contact-field input:focus,
+.salon-contact-field textarea:focus {
+  border-color: rgba(233, 160, 152, 0.72);
+  background: rgba(255, 249, 245, 0.12);
+  box-shadow: 0 0 0 4px rgba(233, 160, 152, 0.12);
+}
+
+.salon-contact-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.salon-contact-actions p {
+  margin: 0;
+  color: rgba(255, 249, 245, 0.54);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.salon-contact-actions button {
+  min-height: 3.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: #e9a098;
+  color: #211215;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 0.85rem 1.25rem;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    opacity 220ms ease;
+}
+
+.salon-contact-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #f2b8b1;
+}
+
+.salon-contact-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.46;
+}
+
+.salon-contact-status {
+  min-height: 1.4rem;
+  color: #e9a098;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.salon-contact-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+  min-height: 38rem;
+  overflow: hidden;
+  background: #fffaf7;
+}
+
+.salon-contact-map-frame {
+  position: relative;
+  min-height: 100%;
+  background:
+    linear-gradient(145deg, rgba(96, 113, 100, 0.22), rgba(216, 179, 108, 0.18)),
+    #e8ded8;
+}
+
+.salon-contact-map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(0.72) contrast(1.04) sepia(0.08);
+}
+
+.salon-contact-map-card {
+  display: grid;
+  align-content: space-between;
+  gap: 1.25rem;
+  border-left: 1px solid #ead8d0;
+  background: rgba(255, 252, 249, 0.9);
+  padding: clamp(1.1rem, 2.4vw, 1.45rem);
+}
+
+.salon-contact-map-card h3 {
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 780;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.salon-contact-map-card p {
+  margin: 0;
+  color: #735d58;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.salon-contact-details {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid #ead8d0;
+}
+
+.salon-contact-details div {
+  border-bottom: 1px solid #ead8d0;
+  padding: 0.9rem 0;
+}
+
+.salon-contact-details dt {
+  color: #9f7b59;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.salon-contact-details dd {
+  margin: 0.35rem 0 0;
+  color: #251719;
+  font-size: 0.96rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.salon-contact-map-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.salon-contact-map-actions a {
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease;
+}
+
+.salon-contact-map-actions a:first-child {
+  background: #607164;
+  color: #ffffff;
+}
+
+.salon-contact-call-action {
+  display: none;
+}
+
+.salon-contact-map-actions .salon-contact-call-action {
+  border: 1px solid #dfcbc3;
+  color: #56394a;
+}
+
+.salon-contact-map-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.salon-contact-map-actions a:first-child:hover {
+  background: #4f5f53;
+}
+
+.salon-contact-map-actions .salon-contact-call-action:hover {
+  border-color: rgba(196, 108, 98, 0.42);
+  background: rgba(196, 108, 98, 0.08);
+  color: #251719;
+}
+
+@media (max-width: 1080px) {
+  .salon-contact-heading,
+  .salon-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-contact-heading span {
+    max-width: 42rem;
+  }
+
+  .salon-contact-map {
+    min-height: auto;
+  }
+
+  .salon-contact-map-frame {
+    min-height: 30rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .salon-contact-map {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-contact-map-card {
+    border-left: 0;
+    border-top: 1px solid #ead8d0;
+  }
+}
+
+@media (max-width: 640px) {
+  .salon-contact {
+    padding: 4rem 1rem;
+  }
+
+  .salon-contact-heading {
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .salon-contact-heading h2 {
+    max-width: 12.5ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.35rem, 10.8vw, 3.35rem);
+  }
+
+  .salon-contact-heading span {
+    border-left: 0;
+    border-top: 2px solid #d8b36c;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+  }
+
+  .salon-contact-form,
+  .salon-contact-map-card {
+    padding: 1.1rem;
+  }
+
+  .salon-contact-form-top {
+    text-align: center;
+  }
+
+  .salon-contact-form-top h3 {
+    max-width: 11.5ch;
+    margin: 0 auto;
+    font-size: clamp(2rem, 9.5vw, 2.8rem);
+  }
+
+  .salon-contact-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-contact-actions p {
+    text-align: center;
+  }
+
+  .salon-contact-actions button {
+    width: 100%;
+  }
+
+  .salon-contact-map-frame {
+    min-height: 22rem;
+  }
+
+  .salon-contact-map-card {
+    text-align: center;
+  }
+
+  .salon-contact-map-card h3 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+
+  .salon-contact-map-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-contact-call-action {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salon-contact-field input,
+  .salon-contact-field textarea,
+  .salon-contact-actions button,
+  .salon-contact-map-actions a {
+    transition-duration: 0.01ms;
+  }
+}

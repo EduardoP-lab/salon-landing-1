@@ -244,6 +244,7 @@
 }
 
 .salon-specialists-footer a {
+  display: none;
   min-height: 3.2rem;
   flex-shrink: 0;
   align-items: center;
@@ -416,6 +417,7 @@
   }
 
   .salon-specialists-footer a {
+    display: flex;
     width: 100%;
   }
 }

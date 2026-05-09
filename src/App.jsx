@@ -1,5 +1,6 @@
 import './App.css'
 import './normalize.css'
+import Contact from './Components/Contact'
 import Especialistas from './Components/Especialistas'
 import Gallery from './Components/Gallery'
 import Hero from './Components/Hero'
@@ -15,6 +16,7 @@ function App() {
         <Services />
         <Especialistas />
         <Gallery />
+        <Contact />
       </main>
     </>
   )

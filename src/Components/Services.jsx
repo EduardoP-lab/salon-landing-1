@@ -110,7 +110,9 @@ function Services() {
             Cada cita incluye una mini asesoria para elegir intensidad, acabado
             y cuidados posteriores.
           </p>
-          <a href="tel:+526621234567">Agendar por telefono</a>
+          <a className="salon-mobile-call" href="tel:+526621234567">
+            Agendar por telefono
+          </a>
         </div>
       </div>
     </section>
